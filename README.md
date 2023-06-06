@@ -1,6 +1,6 @@
  ### EXPERIMENT -07 CONFIGURING NETWORK SERVER FOR CONNECTING GATEWAY AND END NODE 
  
-## Aim: To  configure  the 
+## Aim: To  configure  the Network server and end device for traferring data on the network
 ## Components required: end node stm 32 development kit , dragino LPS8, network server 
 
 ## Theory :
@@ -30,13 +30,28 @@ Permissioned access and log-ins for network users Gateway access to the Internet
 ![image](https://github.com/vasanthkumarch/EXPERIMENT-07-CONFIGURING-NETWORK-SERVER-FOR-CONNECTING-GATEWAY-AND-END-NODE-/assets/36288975/1fb72be5-e48d-4cde-a329-0cfb0d29070f)
 6. add the attributesin the end device as  shown below 
  ![image](https://github.com/vasanthkumarch/EXPERIMENT-07-CONFIGURING-NETWORK-SERVER-FOR-CONNECTING-GATEWAY-AND-END-NODE-/assets/36288975/00bff30b-42fc-42d5-9540-285d270e41cb)
-7.
+7.using AT commands configure end device in serial port utility
+AT Commands to set initially (Mandatory)
+ AT+FDR // To do factory data reset
+ AT+NJM=1 // To set OTAA mode
+ AT+ADR=1 // To enable the ADR
+ AT+TDC=600000 // To set the default sampling interval as 10 minutes
+(Should not give below 5 minutes)
+ AT+CLASS=C // To set class C
+ AT+DEUI=XX XX XX XX XX XX XX XX // To set Device EUI key
+ AT+APPEUI=XX XX XX XX XX XX XX XX // To set APP EUI key
+ AT+APPEUI=XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX //
+To set APP Key
+ ATZ // To take effective action on below settings (As like saving)
+
 
 
 ## OUTPUT 
+![image](https://github.com/vasanthkumarch/EXPERIMENT-07-CONFIGURING-NETWORK-SERVER-FOR-CONNECTING-GATEWAY-AND-END-NODE-/assets/36288975/858435f2-2f59-435d-ad3f-7ecd377bd0da)
 
 
 
 
 ## Results: 
+
 
